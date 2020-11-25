@@ -2477,7 +2477,7 @@
         "affectsGlobalScope": false
       },
       "../src/message/message.service.ts": {
-        "version": "024edefe2d4513c2ed87a4713d26ac0fd3c613530794d90ab8d76b52cebd5e61",
+        "version": "55d31839e1fb89747e9cf21766be8184c54d87845a6990a77c26f3aca61a0876",
         "signature": "a7f648cc1364c5cf9429ee2db00de92edc346d60c4f505a7e2d662137dcefc73",
         "affectsGlobalScope": false
       },
@@ -2882,7 +2882,7 @@
         "affectsGlobalScope": false
       },
       "../src/app.module.ts": {
-        "version": "3ade63152b92ec931cdd87abf77bea3cdb60c97f908f5c7df580e33704b1d782",
+        "version": "3550f7db3e94406afc698729ca43aa153e1e95fb6132cb818520dcb38bd06db0",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -3067,7 +3067,7 @@
         "affectsGlobalScope": false
       },
       "../src/main.ts": {
-        "version": "e25d9bd8f80b6ffbcc8826ed1b407e747e4fbe346c5bab62cbe5837da4eeb189",
+        "version": "30f450c04dca4cdc6bf920128d7415c67a50e69d71dcf0c15a56fa6559feafe6",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
@@ -16472,6 +16472,7 @@
       "../src/app.module.ts",
       "../src/app.service.ts",
       "../src/email/email.module.ts",
+      "../src/email/email.service.ts",
       "../src/main.ts",
       "../src/message/message.controller.ts",
       "../src/message/message.entity.ts",

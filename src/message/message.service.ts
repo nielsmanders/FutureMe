@@ -11,6 +11,8 @@ export class MessageService {
     ) {}
 
     async create(message: any): Promise<string>{
+        message.createdAt = new Date().getTime() / 1000;
+        message.sendAt = new Date(message.sendAt).getTime() / 1000;
         await this.messageRepository.save(message);
         return "Succesfully added";
     }
