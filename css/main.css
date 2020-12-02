@@ -314,3 +314,21 @@ img {
     user-select: none;
     transition: 0.25s;
 }
+
+#modal {
+    margin-left: 25vw;
+    padding-top: 25vh;
+}
+
+#modal2 {
+    margin-left: 25vw;
+    padding-top: 10vh;
+}
+
+#modal-background {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100vh;
+    width: 100vw;
+    z-index: 99;
+    position: fixed;
+}

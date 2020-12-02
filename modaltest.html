@@ -27,19 +27,21 @@
 
 <body>
 
-    <div class="p-8">
-        <div class="bg-white py-16 rounded-lg shadow-xl relative max-w-sm">
-            <p class="text-center text-gray-700 font-bold text-4xl">Saving failed</p>
-            <p class="text-gray-600 text-lg text-center">
-                Your message has not been savde due to a error on our side. Please try again later.
-            </p>
-            <div class="flex justify-center items-center mt-6">
-                <button class="bg-red-500 text-white font-bold px-8 py-2 rounded-lg hover:opacity-75">
+
+    <div id="modal-background">
+        <div class="p-8" id="modal">
+            <div class="bg-white py-16 rounded-t-lg shadow-xl relative max-w-sm">
+                <p class="text-center text-gray-700 font-bold text-4xl">Saving failed</p>
+                <p class="text-gray-600 text-lg text-center">
+                    Your message has not been savde due to a error on our side. Please try again later.
+                </p>
+                <div class="flex justify-center items-center mt-6">
+                    <button class="bg-red-500 text-white font-bold px-8 py-2 rounded-lg hover:opacity-75">
               close
             </button>
-            </div>
-            <div class="absolute w-full">
-                <svg class="fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                </div>
+                <div class="absolute w-full">
+                    <svg class="fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
               <path
                 fill-opacity="1"
                 d="M0,64L120,90.7C240,117,480,171,720,176C960,181,1200,139,1320,117.3L1440,
@@ -47,21 +49,24 @@
       320C480,320,240,320,120,320L0,320Z"
               ></path>
             </svg>
-                <div class="h-6 w-full bg-red-500 rounded-b-lg"></div>
+                    <div class="h-6 w-full bg-red-500 rounded-b-lg"></div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="p-8">
-        <div class="bg-white rounded-lg shadow-xl max-w-sm">
-            <div class="h-64 bg-green-500 flex justify-center items-center rounded-t-lg">
-                <div class="h-24 w-24 bg-white rounded-full flex justify-center items-center">
-                    <i class="material-icons text-green-500">
+
+    <!-- <div id="modal-background">
+        <div class="p-8" id="modal2">
+            <div class="bg-white rounded-t-lg rounded-b-lg shadow-xl max-w-sm">
+                <div class="h-64 bg-green-500 flex justify-center items-center rounded-t-lg">
+                    <div class="h-24 w-24 bg-white rounded-full flex justify-center items-center">
+                        <i class="material-icons text-green-500">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -7 24 24" width="24" height="24" preserveAspectRatio="xMinYMin" class="icon__icon"><path d="M5.486 9.73a.997.997 0 0 1-.707-.292L.537 5.195A1 1 0 1 1 1.95 3.78l3.535 3.535L11.85.952a1 1 0 0 1 1.415 1.414L6.193 9.438a.997.997 0 0 1-.707.292z"></path></svg>
               </i>
+                    </div>
                 </div>
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="fill-current">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="fill-current">
             <path
               fill="#48bb78"
               fill-opacity="1"
@@ -70,19 +75,20 @@
       640,0,480,0C320,0,160,0,80,0L0,0Z"
             ></path>
           </svg>
-            <div class="p-8 -mt-12">
-                <p class="font-bold text-center text-4xl text-gray-700">Message saved</p>
-                <p class="text-gray-600 text-center mt-5">
-                    Your message has been succesfully saved and will be send back to you on the date you have selected.
-                </p>
-                <div class="flex justify-center mt-6">
-                    <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                <div class="p-8 -mt-12">
+                    <p class="font-bold text-center text-4xl text-gray-700">Message saved</p>
+                    <p class="text-gray-600 text-center mt-5">
+                        Your message has been succesfully saved and will be send back to you on the date you have selected.
+                    </p>
+                    <div class="flex justify-center mt-6">
+                        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
                 Close
               </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 </body>
 
