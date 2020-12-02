@@ -1,0 +1,29 @@
+/*!
+ * Start Bootstrap - Scrolling Nav (https://startbootstrap.com/templates/scrolling-nav)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-scrolling-nav/blob/master/LICENSE)
+ */
+
+header {
+    padding: 156px 0 100px;
+}
+
+section {
+    padding: 150px 0;
+}
+
+.a-link-gray {
+    color: gray;
+}
+
+.nav-item {
+    padding-left: 3rem;
+}
+
+.navbar-toggler-icon {
+    color: red;
+}
+
+.navbar {
+    font-family: 'Ropa Sans', sans-serif;
+}
