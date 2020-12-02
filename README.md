@@ -17,7 +17,7 @@ Voor het installeren en draaien van API zijn een paar stappen die doorlopen dien
 
 1. Go to the Node.js [Downloads page](https://nodejs.org/en/download/)
 2. Download Node.js for macOS by clicking the "Macintosh Installer" option
-3. Run the downloaded Node.js .pkg Installer
+3. Run de gedownloade Node.js .pkg Installer
 4. Voer de installer uit, inclusief het accepteren van de  license, het selecteren van een locatie en toestemming geven voor de installatie.
 5. Node.js is geinstalleerd! Om er zeker van te zijn dat Node.js juist is geinstalleerd, run *node -v* in de terminal en als antwoord zou je iets moeten krijgen zoals *v6.9.4*
 
@@ -25,7 +25,7 @@ Voor het installeren en draaien van API zijn een paar stappen die doorlopen dien
 
 1. Go to the Node.js [Downloads page](https://nodejs.org/en/download/)
 2. Download Node.js for Windows by clicking the "Windows Installer" option
-3. Run the downloaded Node.js .pkg Installer
+3. Run de gedownloade Node.js .pkg Installer
 4. Voer de installer uit, inclusief het accepteren van de  license, het selecteren van een locatie en toestemming geven voor de installatie.
 5. Node.js is geinstalleerd! Om er zeker van te zijn dat Node.js juist is geinstalleerd, run *node -v* in de terminal en als antwoord zou je iets moeten krijgen zoals *v6.9.4*
 
