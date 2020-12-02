@@ -269,6 +269,398 @@
     <!-- Material design -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js "></script>
 
+
+    <!-- emaill varification -->
+    <script>
+        var emailInput;
+        var emailCorrect = false;
+
+        $("#email-input").on("change", function() {
+            // alert("change detection works!");
+            emailInput = $(this).val();
+
+            if (validateEmail(emailInput)) {
+                $(this).css({
+                    color: "white",
+                    background: "#00ff0080",
+                    border: "1px solid green"
+                });
+            } else {
+                $(this).css({
+                    color: "red",
+                    border: "1px solid red",
+                    background: "#ffffff",
+                    color: "#495057"
+                });
+                // alert("not a valid email address");
+            }
+        });
+
+        function validateEmail(email) {
+            var pattern = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+
+            return $.trim(email).match(pattern) ? true : false;
+        }
+    </script>
+
+    <script>
+        //responsive dropshadow menu toggle
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 50) {
+                $('#navBar').addClass('floatingNav');
+            } else {
+                $('#navBar').removeClass('floatingNav');
+            }
+        });
+    </script>
+
+    <script>
+        //checks for only letters for first name
+        var firstnameInput;
+        var firstNameCorrect = false;
+
+        $("#firstname-input").on("change", function() {
+            //alert("change detection works!");
+            firstnameInput = $(this).val();
+
+            if (validateTextName(firstnameInput)) {
+                $(this).css({
+                    color: "white",
+                    background: "#00ff0080",
+                    border: "1px solid green"
+                });
+            } else {
+                $(this).css({
+                    color: "red",
+                    border: "1px solid red",
+                    background: "#ffffff",
+                    color: "#495057"
+                });
+
+                // alert("not a valid email address");
+            }
+        });
+
+        function validateTextName(text) {
+            var patternLettersName = /^[A-Za-z\s]+$/;
+
+            return $.trim(text).match(patternLettersName) ? true : false;
+        }
+    </script>
+
+    <script>
+        //checks for only letters for first name
+        var lastnameInput;
+        var lastnameCorrect = false;
+
+        $("#lastname-input").on("change", function() {
+            //alert("change detection works!");
+            lastnameInput = $(this).val();
+
+            if (validateTextName(lastnameInput)) {
+                $(this).css({
+                    color: "white",
+                    background: "#00ff0080",
+                    border: "2px solid green"
+                });
+            } else {
+                $(this).css({
+                    color: "red",
+                    border: "1px solid red",
+                    background: "#ffffff",
+                    color: "#495057"
+                });
+
+                // alert("not a valid email address");
+            }
+        });
+
+
+
+        function validateTextName(text) {
+            var patternLettersName = /^[A-Za-z\s]+$/;
+
+            return $.trim(text).match(patternLettersName) ? true : false;
+        }
+    </script>
+
+    <script>
+        //checks for only letters for last name
+        var textInputMessage;
+        var messageCorrect = false;
+
+        $("#message-input").on("change", function() {
+            //alert("change detection works!");
+            textInputMessage = $(this).val();
+
+            if (validateText(textInputMessage)) {
+                $(this).css({
+                    color: "white",
+                    background: "#00ff0080",
+                    border: "2px solid green"
+                });
+                $(".message-error").css({
+                    color: "#1354f4",
+                });
+            } else {
+                $(this).css({
+                    color: "red",
+                    border: "1px solid red",
+                    background: "#ffffff",
+                    color: "#495057"
+                });
+                $(".message-error").css({
+                    color: "red",
+                });
+                // alert("not a valid email address");
+            }
+        });
+
+        function validateText(text) {
+            var patternLettersMessage = /^[A-Za-z0-9.,"''"():?!@#\s]+$/;
+
+            return $.trim(text).match(patternLettersMessage) ? true : false;
+        }
+    </script>
+
+    <script>
+        var readyForSend = false;
+
+        // make button pressalbe (all forms need to be correct)
+        $("#message-input,#firstname-input,#lastname-input,#email-input").on("change", function() {
+            if (validateTextName(firstnameInput) && validateTextName(lastnameInput) && validateText(textInputMessage) && validateEmail(emailInput) && isDateInFuture(dateInput)) {
+                readyForSend = true;
+                $("#form-submit").prop('disabled', false);
+                $("#form-submit").css({
+                    color: "green",
+                    background: "green",
+                    border: "2px solid green",
+                });
+            } else {
+                readyForSend = false;
+                $("#form-submit").prop('disabled', true);
+                $("#form-submit").css({
+                    color: "red",
+                    border: "1px solid red",
+                    color: "#495057",
+                });
+            }
+        });
+    </script>
+
+    <!-- date input formatting -->
+    <script>
+        var date = document.getElementById('date-input');
+
+        function checkValue(str, max) {
+            if (str.charAt(0) !== '0' || str == '00') {
+                var num = parseInt(str);
+                if (isNaN(num) || num <= 0 || num > max) num = 1;
+                str = num > parseInt(max.toString().charAt(0)) && num.toString().length == 1 ? '0' + num : num.toString();
+            };
+            return str;
+        };
+
+        date.addEventListener('input', function(e) {
+            this.type = 'text';
+            var input = this.value;
+            if (/\D\/$/.test(input)) input = input.substr(0, input.length - 3);
+            var values = input.split('/').map(function(v) {
+                return v.replace(/\D/g, '')
+            });
+            if (values[0]) values[0] = checkValue(values[0], 12);
+            if (values[1]) values[1] = checkValue(values[1], 31);
+            var output = values.map(function(v, i) {
+                return v.length == 2 && i < 2 ? v + ' / ' : v;
+            });
+            this.value = output.join('').substr(0, 14);
+        });
+
+        date.addEventListener('blur', function(e) {
+            this.type = 'text';
+            var input = this.value;
+            var values = input.split('/').map(function(v, i) {
+                return v.replace(/\D/g, '')
+            });
+            var output = '';
+
+            if (values.length == 3) {
+                var year = values[2].length !== 4 ? parseInt(values[2]) + 2000 : parseInt(values[2]);
+                var month = parseInt(values[0]) - 1;
+                var day = parseInt(values[1]);
+                var d = new Date(year, month, day);
+                if (!isNaN(d)) {
+                    document.getElementById('result').innerText = d.toString();
+                    var dates = [d.getMonth() + 1, d.getDate(), d.getFullYear()];
+                    output = dates.map(function(v) {
+                        v = v.toString();
+                        return v.length == 1 ? '0' + v : v;
+                    }).join(' / ');
+                };
+            };
+            this.value = output;
+        });
+    </script>
+
+
+
+    <!-- script voor date input valideren -->
+
+    <script>
+        function validatedate(inputText) {
+            var dateformat = /^(0?[1-9]|[12][0-9]|3[01])[\s][\/\-][\s](0?[1-9]|1[012])[\s][\/\-][\s]\d{4}$/;
+            // Match the date format through regular expression
+            if (inputText.value.match(dateformat)) {
+                document.form1.text1.focus();
+                //Test which seperator is used '/' or '-'
+                var opera1 = inputText.value.split('/');
+                var opera2 = inputText.value.split('-');
+                lopera1 = opera1.length;
+                lopera2 = opera2.length;
+                // Extract the string into month, date and year
+                if (lopera1 > 1) {
+                    var pdate = inputText.value.split('/');
+                } else if (lopera2 > 1) {
+                    var pdate = inputText.value.split('-');
+                }
+                var dd = parseInt(pdate[0]);
+                var mm = parseInt(pdate[1]);
+                var yy = parseInt(pdate[2]);
+                // Create list of days of a month [assume there is no leap year by default]
+                var ListofDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+                if (mm == 1 || mm > 2) {
+                    if (dd > ListofDays[mm - 1]) {
+                        alert('Invalid date format!');
+                        return false;
+                    }
+                }
+                if (mm == 2) {
+                    var lyear = false;
+                    if ((!(yy % 4) && yy % 100) || !(yy % 400)) {
+                        lyear = true;
+                    }
+                    if ((lyear == false) && (dd >= 29)) {
+                        alert('Invalid date format!');
+                        return false;
+                    }
+                    if ((lyear == true) && (dd > 29)) {
+                        alert('Invalid date format!');
+                        return false;
+                    }
+                }
+            } else {
+                alert("Invalid date format!");
+                document.form1.text1.focus();
+                return false;
+            }
+        }
+    </script>
+
+
+    <script>
+        var date = document.getElementById('date-input');
+
+        function checkValue(str, max) {
+            if (str.charAt(0) !== '0' || str == '00') {
+                var num = parseInt(str);
+                if (isNaN(num) || num <= 0 || num > max) num = 1;
+                str = num > parseInt(max.toString().charAt(0)) && num.toString().length == 1 ? '0' + num : num.toString();
+            };
+            return str;
+        };
+
+        date.addEventListener('input', function(e) {
+            this.type = 'text';
+            var input = this.value;
+            if (/\D\/$/.test(input)) input = input.substr(0, input.length - 3);
+            var values = input.split('/').map(function(v) {
+                return v.replace(/\D/g, '')
+            });
+            if (values[0]) values[0] = checkValue(values[0], 31);
+            if (values[1]) values[1] = checkValue(values[1], 12);
+            var output = values.map(function(v, i) {
+                return v.length == 2 && i < 2 ? v + ' / ' : v;
+            });
+            this.value = output.join('').substr(0, 14);
+        });
+
+        date.addEventListener('blur', function(e) {
+            this.type = 'text';
+            var input = this.value;
+            var values = input.split('/').map(function(v, i) {
+                return v.replace(/\D/g, '')
+            });
+            var output = '';
+
+            if (values.length == 3) {
+                var year = values[2].length !== 4 ? parseInt(values[2]) + 2000 : parseInt(values[2]);
+                var month = parseInt(values[1]) - 1;
+                var day = parseInt(values[0]);
+                var d = new Date(year, month, day);
+                if (!isNaN(d)) {
+                    document.getElementById('result').innerText = d.toString();
+                    var dates = [d.getDate(), d.getMonth() + 1, d.getFullYear()];
+                    output = dates.map(function(v) {
+                        v = v.toString();
+                        return v.length == 1 ? '0' + v : v;
+                    }).join(' / ');
+                };
+            };
+            this.value = output;
+        });
+    </script>
+
+    <script>
+        var dateInput;
+        var dateInputCorrect = false;
+
+        $("#date-input").on("change", function() {
+            //alert("change detection works!");
+            dateInput = $(this).val();
+
+            console.log(dateInput);
+
+            if (isDateInFuture(dateInput)) {
+                $(this).css({
+                    color: "white",
+                    background: "#00ff0080",
+                    border: "2px solid green"
+                });
+            } else {
+                $(this).css({
+                    color: "red",
+                    border: "1px solid red",
+                    background: "#ffffff",
+                    color: "#495057"
+                });
+
+                // alert("not a valid email address");
+            }
+        });
+    </script>
+
+    <script>
+        function isDateInFuture(dateInput) {
+
+            var date = new Date();
+
+            mydate = new Date(dateInput);
+            console.log(mydate);
+
+            if (date < mydate) {
+                // alert(" The given date is Future Date");
+                return true;
+            } else {
+                // alert("The given date is Past Date");
+                return false;
+            }
+        }
+    </script>
+
+
+
+
+
 </body>
 
 </html>
