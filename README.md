@@ -6,6 +6,14 @@ Een webapplicatie waarin je een boodschap kunt typen over bijvoorbeeld hoe het n
 
 De applicatie is reeds in ontwikkeling en nog niet geschikt gemaakt om te exporteren. Je kunt de applicatie wel downloaden en zelf bouwen, hiervoor is wel een (lokale) database benodigd. 
 
+### Install Node.js for Mac
+
+1. Go to the Node.js [Downloads page](https://nodejs.org/en/download/)
+2. Download Node.js for macOS by clicking the "Macintosh Installer" option
+3. Run the downloaded Node.js .pkg Installer
+4. Run the installer, including accepting the license, selecting the destination, and authenticating for the install.
+5. You're finished! To ensure Node.js has been installed, run node -v in your terminal - you should get something like v6.9.4
+
 ## Usage
 
 Via een webapplicatie of het programma postman en een terminal programma kunnen de functie van de applicatie getest worden, Dit houdt in het invoeren van gegevens en het versturen van emails. 
