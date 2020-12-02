@@ -657,7 +657,46 @@
         }
     </script>
 
+    <!-- sending data to API -->
+    <script>
+        function dataToAPI(firstname, lastname, message, email, date) {
+            var body = {
+                "firstName": firstname,
+                "lastName": lastname,
+                "message": message,
+                "email": email,
+                "sendAt": (date.replace(" ", ""))
 
+            }
+
+            console.log(body);
+
+            fetch('http://localhost:3000/message', {
+                method: 'POST',
+                body: JSON.stringify(
+                    body,
+                ),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8'
+                }
+            }).then(function(response) {
+                console.log('test', response)
+                if (response.ok) {
+                    alert('succes!');
+                }
+            }).catch(function(e) {
+                console.log('catch', e)
+                alert("niet toegevoegd!");
+            })
+        }
+
+        $("#form").on("submit", function(e) {
+            e.preventDefault();
+            console.log(e);
+
+            dataToAPI(e.target[0].value, e.target[1].value, e.target[4].value, e.target[2].value, e.target[3].value);
+        });
+    </script>
 
 
 
