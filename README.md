@@ -45,6 +45,8 @@ Het starten van de API kan, wanneer er naar de juiste folder is genavigeert in d
 
 Via een webapplicatie of het programma postman en een terminal programma kunnen de functie van de applicatie getest worden, Dit houdt in het invoeren van gegevens en het versturen van emails. 
 
+## Feedback
+Alle soorten feedback zijn welkom. Dit kan zijn in de vorm van [issues](https://github.com/nielsmanders/FutureMe/issues), [pull requests](https://github.com/nielsmanders/FutureMe/pulls) of iets anders via [email](mailto:lunde@adobe.com?subject=[Github]%Feedback%20FutureMe).
 
 ## License
 MIT License
