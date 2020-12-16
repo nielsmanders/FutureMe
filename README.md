@@ -74,7 +74,7 @@ Voor het testen van de front-end kan deze offline worden geopend zonder dat de A
 ```
 Wanneer er wel gebruik wordt gemaakt van de API kan in de database ook gekeken worden of het ingevulde testbericht hierin terug komt. Dit kan door in bijvoorbeeld MYSQL Workbench de volgende query in te vullen:
 ```
-select * FROM message;
+SELECT * FROM message;
 ```
 De database zal alle ingevulde messages teruggeven en wanneer alles goed werkt zal het testbericht hier ook tussen staan, onder aan de lijst van messages.
 
@@ -89,7 +89,7 @@ npm run start:dev
 Voor het versturen van de email wordt gebruikt gemaakt van een Gmail API die door Google beschikbaar gesteld wordt. Helaas is de enige manier om te testen, of de het versturen van email werkt, hierdoor het invullen van gegevens in de front-end of direct in de database waarbij een eigen emailadress gebruikt wordt. Als het goed is ontvang je na enige tijd automatisch je ingevuld test gegevens via email. 
 
 ## 5. Feedback
-Alle soorten feedback zijn welkom. Dit kan zijn in de vorm van [issues](https://github.com/nielsmanders/FutureMe/issues), [pull requests](https://github.com/nielsmanders/FutureMe/pulls) of iets anders via [email](mailto:lunde@adobe.com?subject=[Github]%Feedback%20FutureMe).
+Alle soorten feedback zijn welkom. Dit kan zijn in de vorm van [issues](https://github.com/nielsmanders/FutureMe/issues), [pull requests](https://github.com/nielsmanders/FutureMe/pulls) of iets anders via [email](mailto:nielsmanders@gmail.com?subject=[Github]%Feedback%20FutureMe).
 
 ## 6. License
 MIT License
