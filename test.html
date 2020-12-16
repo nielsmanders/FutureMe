@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
 
@@ -22,23 +22,151 @@
 
     <!-- Tailwind css -->
     <link href="css/tailwind.min.css" rel="stylesheet">
-
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* The Modal (background) */
+        
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+        
+        .modal2 {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+        /* Modal Content */
+        
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s
+        }
+        
+        .modal2-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s
+        }
+        /* Add Animation */
+        
+        @-webkit-keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+        
+        @keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+        /* The Close Button */
+        
+        .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
-<body id="page-top">
+<body>
 
-    <!-- modal box succes -->
-    <!-- <div id="modal-background">
-        <div class="p-8" id="modal2">
-            <div class="bg-white rounded-t-lg rounded-b-lg shadow-xl max-w-sm">
-                <div class="h-64 bg-green-500 flex justify-center items-center rounded-t-lg">
-                    <div class="h-24 w-24 bg-white rounded-full flex justify-center items-center">
-                        <i class="material-icons text-green-500">
+    <h2>Animated Modal with Header and Footer</h2>
+
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">Open Modal</button><br>
+    <button id="myBtn2">Open Modal</button>
+
+    <!-- The Succes Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content max-w-sm rounded-t-lg rounded-b-lg">
+            <!-- <div id="modal-background"> -->
+            <!-- <div class="p-8" id="modal2"> -->
+            <!-- <div class="bg-white rounded-t-lg rounded-b-lg shadow-xl max-w-sm"> -->
+            <div class="h-64 bg-green-500 flex justify-center items-center rounded-t-lg">
+                <div class="h-24 w-24 bg-white rounded-full flex justify-center items-center">
+                    <i class="material-icons text-green-500">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -7 24 24" width="24" height="24" preserveAspectRatio="xMinYMin" class="icon__icon"><path d="M5.486 9.73a.997.997 0 0 1-.707-.292L.537 5.195A1 1 0 1 1 1.95 3.78l3.535 3.535L11.85.952a1 1 0 0 1 1.415 1.414L6.193 9.438a.997.997 0 0 1-.707.292z"></path></svg>
               </i>
-                    </div>
                 </div>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="fill-current">
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="fill-current">
             <path
               fill="#48bb78"
               fill-opacity="1"
@@ -47,247 +175,101 @@
       640,0,480,0C320,0,160,0,80,0L0,0Z"
             ></path>
           </svg>
-                <div class="p-8 -mt-12">
-                    <p class="font-bold text-center text-4xl text-gray-700">Message saved</p>
-                    <p class="text-gray-600 text-center mt-5">
-                        Your message has been succesfully saved and will be send back to you on the date you have selected.
-                    </p>
-                    <div class="flex justify-center mt-6">
-                        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+            <div class="p-8 -mt-12">
+                <p class="font-bold text-center text-4xl text-gray-700">Message saved</p>
+                <p class="text-gray-600 text-center mt-5">
+                    Your message has been succesfully saved and will be send back to you on the date you have selected.
+                </p>
+                <div class="flex justify-center mt-6">
+                    <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" id="myBtnClose">
                 Close
               </button>
-                    </div>
                 </div>
             </div>
         </div>
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+
+    </div>
+
+    <!-- The Fail Modal -->
+    <div id="myModal2" class="modal2">
+
+        <!-- Modal content -->
+        <div class="modal2-content max-w-sm rounded-t-lg rounded-b-lg">
+            <!-- <div id="modal-background">
+        <div class="p-8" id="modal">-->
+            <div class="bg-white py-16 rounded-t-lg shadow-xl relative max-w-sm">
+                <p class="text-center text-gray-700 font-bold text-4xl">Saving failed</p>
+                <p class="text-gray-600 text-lg text-center">
+                    Your message has not been savde due to a error on our side. Please try again later.
+                </p>
+                <div class="flex justify-center items-center mt-6">
+                    <button class="bg-red-500 text-white font-bold px-8 py-2 rounded-lg hover:opacity-75" id="myBtnClose2">
+          close
+        </button>
+                </div>
+                <div class="absolute w-full">
+                    <svg class="fill-current text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill-opacity="1"
+            d="M0,64L120,90.7C240,117,480,171,720,176C960,181,1200,139,1320,117.3L1440,
+  96L1440,320L1320,320C1200,320,960,320,720,
+  320C480,320,240,320,120,320L0,320Z"
+          ></path>
+        </svg>
+                    <div class="h-6 w-full bg-red-500 rounded-b-lg"></div>
+                </div>
+            </div>
+            <!-- </div>
     </div> -->
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top bg-white" id="navBar">
-        <div class="container">
-            <a class="navbar-brand js-scroll-trigger" style="color: #1354f4" href="#page-top">Future Me</a>
-
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger a-link-gray" href="#write">Write</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger a-link-gray" href="#reviews">Reviews</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger a-link-gray" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger a-link-gray" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger a-link-gray" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
         </div>
-    </nav>
 
-    <!-- write section -->
-
-    <div class="px-20 max-w-6xl mx-auto " style="margin-top: 10em; ">
-        <div class="-mx-2 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 ">
-
-            <div class="min-h-0 pb-20 ">
-                <div class="container py-1 max-w-md mx-auto ">
-                    <h5>How it works</h5>
-                    <h2 class="pb-4 ">You write the message, <br> We send it to you!</h2>
-                    <p class="font-light pb-4 ">Different societies may have different theories of property for differing types of ownership. Pauline Peters argued that property systems are not isolable from the social fabric, and notions of property may not be stated as such, but
-                        instead may be framed in negative terms.
-                    </p>
-                    <button class="bg-blue-custom hover:bg-blue-500 text-white font-cond py-2 px-4 rounded-full ">Learn more </button>
-
-                </div>
-            </div>
-
-            <div class="min-h-0 pb-20 ">
-                <div class="max-w-lg max-w-xs bg-blue-custom shadow-2xl rounded-3xl mx-auto text-center py-12 shadow-2xl ">
-                    <div class="container py-1 max-w-md mx-auto ">
-                        <h1 class="pb-4 text-gray-200 text-left font-cond -mt-3">Write a message!</h1>
-                        <form method="" action="" id="form">
-                            <!-- split column name -->
-                            <div class="px-2 ">
-                                <div class="flex -mx-2 pb-2 ">
-                                    <div class="w-1/3 ">
-                                        <div class="h-12 ">
-                                            <div class="mb-4 ">
-                                                <input placeholder="Firstname " class="shadow appearance-none rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="firstname-input" required type="text">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="w-2/3 pl-3 ">
-                                        <div class="h-12 ">
-                                            <div class="mb-4 ">
-                                                <input placeholder="Lastname " class="shadow appearance-none rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="lastname-input" required type="text">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- email input with validation -->
-                            <div class="mb-2 ">
-                                <input placeholder="Email " class="shadow appearance-none rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline " id="email-input" type="email" required autocomplete="off">
-                            </div>
-
-                            <!-- date input with validation -->
-                            <div class="mb-6">
-                                <input placeholder="DD/MM/YYYY " class="shadow appearance-none rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline " id="date-input" type="text" required autocomplete="off">
-                            </div>
-
-                            <!-- message field -->
-                            <div class="mb-0 -mt-4 ">
-                                <textarea placeholder="Message " class="min-h-48 shadow appearance-none w-full py-2 px-3 text-gray-700 mb-3 resize-y rounded-lg leading-tight focus:outline-none focus:shadow-outline" id="message-input" required type="text "></textarea>
-                                <div class="message-error mb-3" style="margin-top: -20px; text-align: left; color: #1354f4">You use some characters that are not allowed</div>
-                            </div>
-
-                            <!-- submit button -->
-                            <div class=" flex items-center justify-between ">
-                                <button class="bg-white hover:bg-black text-gray-700 font-cond py-2 px-4 rounded-lg" id="form-submit">Save and send to future me</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
-    <!-- review section -->
-    <div class="px-20 max-w-6xl mx-auto pt-20">
-        <h5>What others think</h5>
-        <h2 class="pb-4 ">Reviews</h2>
-        <div class="-mx-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 ">
-            <div class="min-h-0 pb-4">
-                <div class="container py-1 max-w-md mx-auto">
-                    <div class="max-w-sm shadow-2xl rounded-3xl overflow-hidden bg-blue-custom">
-                        <div class="px-6 py-4">
-                            <p class="text-white text-base text-center font-normal">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."</p>
-                            <p class="text-white text-base text-center font-thin pt-4">First and last name</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="min-h-0 pb-4">
-                <div class="container py-1 max-w-md mx-auto">
-                    <div class="max-w-sm shadow-2xl rounded-3xl overflow-hidden bg-blue-custom">
-                        <div class="px-6 py-4">
-                            <p class="text-white text-base text-center font-normal">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."</p>
-                            <p class="text-white text-base text-center font-thin pt-4">First and last name</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="min-h-0 pb-4">
-                <div class="container py-1 max-w-md mx-auto">
-                    <div class="max-w-sm shadow-2xl rounded-3xl overflow-hidden bg-blue-custom">
-                        <div class="px-6 py-4">
-                            <p class="text-white text-base text-center font-normal">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."</p>
-                            <p class="text-white text-base text-center font-thin pt-4">First and last name</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
 
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
 
-    <!-- about section -->
-    <div class="px-20 max-w-6xl mx-auto pt-20">
-        <h5>What others think</h5>
-        <h2 class="pb-4 ">Reviews</h2>
-        <div class="-mx-2 grid">
-            <p class="font-thin pb-4 pl-2">This is an incredible exercise to do no matter how old you are. Writing a letter to yourself gives you insight and teaches you valuable life lessons that will stick with you long afterwards. Think of it as a time capsule.</p>
-        </div>
-    </div>
+        // Get the button that closes the modal
+        var btnClose = document.getElementById("myBtnClose");
 
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
 
-    <!-- new featured section -->
-    <div class="px-20 pb-48 max-w-6xl mx-auto pt-20">
-        <h5>Who talked about it</h5>
-        <h2 class="pb-0 ">Featured on</h2>
-        <div class="flex flex-row flex-wrap -mt-8 -mx-2">
-            <div class="w-full sm:w-1/3 mb-4 sm:mb-0 px-4">
-                <!-- <a class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-contain" href="#" title="Link" style="background-image: url(images/Dezeen.png);"></a>
-                <a class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-contain" href="#" title="Link" style="background-image: url(images/DutchDesignWeek.png);"></a> -->
-                <img src="images/Dezeen.png" alt="Dezeen" class="block mt-20 rounded max-w-full h-auto align-middle border-none" />
-                <img src="images/DutchDesignWeek.png" alt="Dutch Design Week" class="block mt-20 rounded max-w-full h-auto align-middle border-none" />
-            </div>
-            <div class="w-full sm:w-1/3 mb-4 sm:mb-0 px-4">
-                <!-- <a class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-contain" href="#" title="Link" style="background-image: url(images/NewYorkTimes.png);"></a>
-                <a class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-contain" href="#" title="Link" style="background-image: url(images/TheTelegraph.png);"></a> -->
-                <img src="images/NewYorkTimes.png" alt="New York Times" class="block mt-20 rounded max-w-full h-auto align-middle border-none" />
-                <img src="images/TheTelegraph.png" alt="The Telegraph" class="block mt-20 rounded max-w-full h-auto align-middle border-none" />
-            </div>
-            <div class="w-full sm:w-1/3 mb-4 sm:mb-0 px-4">
-                <!-- <a class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-contain" href="#" title="Link" style="background-image: url(images/Disegno.png);"></a>
-                <a class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-contain" href="#" title="Link" style="background-image: url(images/Wallpaper.png);"></a> -->
-                <img src="images/Disegno.png" alt="Disegno" class="block mt-20 rounded max-w-full h-auto align-middle border-none" />
-                <img src="images/Wallpaper.png" alt="Wallpaper" class="block mt-20 rounded max-w-full h-auto align-middle border-none" />
-            </div>
-        </div>
-    </div>
+        // When the user clicks on bottun of the modal, close it
+        btnClose.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
 
-    <!-- new footer -->
-    <footer class="h-full bg-blue-custom rounded-t-3xl max-w-full mx-auto">
-        <div class="px-20 pb-2 max-w-6xl mx-auto pt-4">
-            <div class="-mx-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
-                <div class="min-h-0 pb-4">
-                    <div class="container py-1 max-w-md mx-auto">
-                        <div class="px-6 py-4">
-                            <p class="text-white text-base font-normal">Future me</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="min-h-0 pb-4">
-                    <div class="container py-1 max-w-md mx-auto">
-                        <div class="px-6 py-4">
-                            <p class="text-white">How it works</p>
-                            <hr class="mt-2 mb-2">
-                            <p class="text-white text-base font-thin">You write a letter to your future self. You can write whatever you like in it and you will be the only one to read it. We just save it and send it on the date you have requested, it's that simple.</p>
+    <script>
+        // Get the modal
+        var modal2 = document.getElementById("myModal2");
 
-                        </div>
-                    </div>
-                </div>
-                <div class="min-h-0 pb-4">
-                    <div class="container py-1 max-w-md mx-auto">
-                        <div class="px-6 py-4">
-                            <p class="text-white">What it does</p>
-                            <hr class="mt-2 mb-2">
-                            <p class="text-white text-base font-thin">This is an incredible exercise to do for everyone. Writing a letter to yourself gives you insights and teaches you valuable life lessons that will stick with you long afterwards. Think of it as a time capsule.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="min-h-0 pb-4">
-                    <div class="container py-1 max-w-md mx-auto">
-                        <div class="px-6 py-4">
-                            <p class="text-white">About</p>
-                            <hr class="mt-2 mb-2">
-                            <p class="text-white text-base font-thin">This website was created as a school project for UI/UX design and a little bit of backend programming.</p>
-                            <p class="text-white mt-4">Social media</p>
-                            <hr class="mt-2 mb-2">
-                            <div class="flex mb-4 mt-3 ml-1">
-                                <div class="w-1/6 h-6 mr-3">
-                                    <img class="h-6" src="svg/instagram.svg" alt="Instagram">
-                                </div>
-                                <div class="w-1/6 h-6 mr-3">
-                                    <img class="h-6" src="svg/twitter.svg" alt="Twitter">
-                                </div>
-                                <div class="w-1/6 h-6 mr-3">
-                                    <img class="h-6" src="svg/tumblr.svg" alt="Tumblr">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn2");
+
+        // Get the button that closes the modal
+        var btnClose2 = document.getElementById("myBtnClose2");
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal2.style.display = "block";
+        }
+
+        // When the user clicks on bottun of the modal, close it
+        btnClose2.onclick = function() {
+            modal2.style.display = "none";
+        }
+    </script>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js "></script>
@@ -299,442 +281,8 @@
     <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js "></script>
 
-    <!-- Custom JavaScript for validation -->
-    <script src="js/email-validation.js "></script>
-
     <!-- Material design -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js "></script>
-
-
-    <!-- emaill varification -->
-    <script>
-        var emailInput;
-        var emailCorrect = false;
-
-        $("#email-input").on("change", function() {
-            // alert("change detection works!");
-            emailInput = $(this).val();
-
-            if (validateEmail(emailInput)) {
-                $(this).css({
-                    color: "white",
-                    background: "#00ff0080",
-                    border: "1px solid green"
-                });
-            } else {
-                $(this).css({
-                    color: "red",
-                    border: "1px solid red",
-                    background: "#ffffff",
-                    color: "#495057"
-                });
-                // alert("not a valid email address");
-            }
-        });
-
-        function validateEmail(email) {
-            var pattern = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-
-            return $.trim(email).match(pattern) ? true : false;
-        }
-    </script>
-
-    <script>
-        //responsive dropshadow menu toggle
-        $(window).scroll(function() {
-            if ($(window).scrollTop() > 50) {
-                $('#navBar').addClass('floatingNav');
-            } else {
-                $('#navBar').removeClass('floatingNav');
-            }
-        });
-    </script>
-
-    <script>
-        //checks for only letters for first name
-        var firstnameInput;
-        var firstNameCorrect = false;
-
-        $("#firstname-input").on("change", function() {
-            //alert("change detection works!");
-            firstnameInput = $(this).val();
-
-            if (validateTextName(firstnameInput)) {
-                $(this).css({
-                    color: "white",
-                    background: "#00ff0080",
-                    border: "1px solid green"
-                });
-            } else {
-                $(this).css({
-                    color: "red",
-                    border: "1px solid red",
-                    background: "#ffffff",
-                    color: "#495057"
-                });
-
-                // alert("not a valid email address");
-            }
-        });
-
-        function validateTextName(text) {
-            var patternLettersName = /^[A-Za-z\s]+$/;
-
-            return $.trim(text).match(patternLettersName) ? true : false;
-        }
-    </script>
-
-    <script>
-        //checks for only letters for first name
-        var lastnameInput;
-        var lastnameCorrect = false;
-
-        $("#lastname-input").on("change", function() {
-            //alert("change detection works!");
-            lastnameInput = $(this).val();
-
-            if (validateTextName(lastnameInput)) {
-                $(this).css({
-                    color: "white",
-                    background: "#00ff0080",
-                    border: "2px solid green"
-                });
-            } else {
-                $(this).css({
-                    color: "red",
-                    border: "1px solid red",
-                    background: "#ffffff",
-                    color: "#495057"
-                });
-
-                // alert("not a valid email address");
-            }
-        });
-
-
-
-        function validateTextName(text) {
-            var patternLettersName = /^[A-Za-z\s]+$/;
-
-            return $.trim(text).match(patternLettersName) ? true : false;
-        }
-    </script>
-
-    <script>
-        //checks for only letters for last name
-        var textInputMessage;
-        var messageCorrect = false;
-
-        $("#message-input").on("change", function() {
-            //alert("change detection works!");
-            textInputMessage = $(this).val();
-
-            if (validateText(textInputMessage)) {
-                $(this).css({
-                    color: "white",
-                    background: "#00ff0080",
-                    border: "2px solid green"
-                });
-                $(".message-error").css({
-                    color: "#1354f4",
-                });
-            } else {
-                $(this).css({
-                    color: "red",
-                    border: "1px solid red",
-                    background: "#ffffff",
-                    color: "#495057"
-                });
-                $(".message-error").css({
-                    color: "red",
-                });
-                // alert("not a valid email address");
-            }
-        });
-
-        function validateText(text) {
-            var patternLettersMessage = /^[A-Za-z0-9.,"''"():?!@#\s]+$/;
-
-            return $.trim(text).match(patternLettersMessage) ? true : false;
-        }
-    </script>
-
-    <script>
-        var readyForSend = false;
-
-        // make button pressalbe (all forms need to be correct)
-        $("#message-input,#firstname-input,#lastname-input,#email-input").on("change", function() {
-            if (validateTextName(firstnameInput) && validateTextName(lastnameInput) && validateText(textInputMessage) && validateEmail(emailInput) && isDateInFuture(dateInput)) {
-                readyForSend = true;
-                $("#form-submit").prop('disabled', false);
-                $("#form-submit").css({
-                    color: "green",
-                    background: "green",
-                    border: "2px solid green",
-                });
-            } else {
-                readyForSend = false;
-                $("#form-submit").prop('disabled', true);
-                $("#form-submit").css({
-                    color: "red",
-                    border: "1px solid red",
-                    color: "#495057",
-                });
-            }
-        });
-    </script>
-
-    <!-- date input formatting -->
-    <script>
-        var date = document.getElementById('date-input');
-
-        function checkValue(str, max) {
-            if (str.charAt(0) !== '0' || str == '00') {
-                var num = parseInt(str);
-                if (isNaN(num) || num <= 0 || num > max) num = 1;
-                str = num > parseInt(max.toString().charAt(0)) && num.toString().length == 1 ? '0' + num : num.toString();
-            };
-            return str;
-        };
-
-        date.addEventListener('input', function(e) {
-            this.type = 'text';
-            var input = this.value;
-            if (/\D\/$/.test(input)) input = input.substr(0, input.length - 3);
-            var values = input.split('/').map(function(v) {
-                return v.replace(/\D/g, '')
-            });
-            if (values[0]) values[0] = checkValue(values[0], 12);
-            if (values[1]) values[1] = checkValue(values[1], 31);
-            var output = values.map(function(v, i) {
-                return v.length == 2 && i < 2 ? v + ' / ' : v;
-            });
-            this.value = output.join('').substr(0, 14);
-        });
-
-        date.addEventListener('blur', function(e) {
-            this.type = 'text';
-            var input = this.value;
-            var values = input.split('/').map(function(v, i) {
-                return v.replace(/\D/g, '')
-            });
-            var output = '';
-
-            if (values.length == 3) {
-                var year = values[2].length !== 4 ? parseInt(values[2]) + 2000 : parseInt(values[2]);
-                var month = parseInt(values[0]) - 1;
-                var day = parseInt(values[1]);
-                var d = new Date(year, month, day);
-                if (!isNaN(d)) {
-                    document.getElementById('result').innerText = d.toString();
-                    var dates = [d.getMonth() + 1, d.getDate(), d.getFullYear()];
-                    output = dates.map(function(v) {
-                        v = v.toString();
-                        return v.length == 1 ? '0' + v : v;
-                    }).join(' / ');
-                };
-            };
-            this.value = output;
-        });
-    </script>
-
-
-
-    <!-- script voor date input valideren -->
-
-    <script>
-        function validatedate(inputText) {
-            var dateformat = /^(0?[1-9]|[12][0-9]|3[01])[\s][\/\-][\s](0?[1-9]|1[012])[\s][\/\-][\s]\d{4}$/;
-            // Match the date format through regular expression
-            if (inputText.value.match(dateformat)) {
-                document.form1.text1.focus();
-                //Test which seperator is used '/' or '-'
-                var opera1 = inputText.value.split('/');
-                var opera2 = inputText.value.split('-');
-                lopera1 = opera1.length;
-                lopera2 = opera2.length;
-                // Extract the string into month, date and year
-                if (lopera1 > 1) {
-                    var pdate = inputText.value.split('/');
-                } else if (lopera2 > 1) {
-                    var pdate = inputText.value.split('-');
-                }
-                var dd = parseInt(pdate[0]);
-                var mm = parseInt(pdate[1]);
-                var yy = parseInt(pdate[2]);
-                // Create list of days of a month [assume there is no leap year by default]
-                var ListofDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-                if (mm == 1 || mm > 2) {
-                    if (dd > ListofDays[mm - 1]) {
-                        alert('Invalid date format!');
-                        return false;
-                    }
-                }
-                if (mm == 2) {
-                    var lyear = false;
-                    if ((!(yy % 4) && yy % 100) || !(yy % 400)) {
-                        lyear = true;
-                    }
-                    if ((lyear == false) && (dd >= 29)) {
-                        alert('Invalid date format!');
-                        return false;
-                    }
-                    if ((lyear == true) && (dd > 29)) {
-                        alert('Invalid date format!');
-                        return false;
-                    }
-                }
-            } else {
-                alert("Invalid date format!");
-                document.form1.text1.focus();
-                return false;
-            }
-        }
-    </script>
-
-
-    <script>
-        var date = document.getElementById('date-input');
-
-        function checkValue(str, max) {
-            if (str.charAt(0) !== '0' || str == '00') {
-                var num = parseInt(str);
-                if (isNaN(num) || num <= 0 || num > max) num = 1;
-                str = num > parseInt(max.toString().charAt(0)) && num.toString().length == 1 ? '0' + num : num.toString();
-            };
-            return str;
-        };
-
-        date.addEventListener('input', function(e) {
-            this.type = 'text';
-            var input = this.value;
-            if (/\D\/$/.test(input)) input = input.substr(0, input.length - 3);
-            var values = input.split('/').map(function(v) {
-                return v.replace(/\D/g, '')
-            });
-            if (values[0]) values[0] = checkValue(values[0], 31);
-            if (values[1]) values[1] = checkValue(values[1], 12);
-            var output = values.map(function(v, i) {
-                return v.length == 2 && i < 2 ? v + ' / ' : v;
-            });
-            this.value = output.join('').substr(0, 14);
-        });
-
-        date.addEventListener('blur', function(e) {
-            this.type = 'text';
-            var input = this.value;
-            var values = input.split('/').map(function(v, i) {
-                return v.replace(/\D/g, '')
-            });
-            var output = '';
-
-            if (values.length == 3) {
-                var year = values[2].length !== 4 ? parseInt(values[2]) + 2000 : parseInt(values[2]);
-                var month = parseInt(values[1]) - 1;
-                var day = parseInt(values[0]);
-                var d = new Date(year, month, day);
-                if (!isNaN(d)) {
-                    document.getElementById('result').innerText = d.toString();
-                    var dates = [d.getDate(), d.getMonth() + 1, d.getFullYear()];
-                    output = dates.map(function(v) {
-                        v = v.toString();
-                        return v.length == 1 ? '0' + v : v;
-                    }).join(' / ');
-                };
-            };
-            this.value = output;
-        });
-    </script>
-
-    <script>
-        var dateInput;
-        var dateInputCorrect = false;
-
-        $("#date-input").on("change", function() {
-            //alert("change detection works!");
-            dateInput = $(this).val();
-
-            console.log(dateInput);
-
-            if (isDateInFuture(dateInput)) {
-                $(this).css({
-                    color: "white",
-                    background: "#00ff0080",
-                    border: "2px solid green"
-                });
-            } else {
-                $(this).css({
-                    color: "red",
-                    border: "1px solid red",
-                    background: "#ffffff",
-                    color: "#495057"
-                });
-
-                // alert("not a valid email address");
-            }
-        });
-    </script>
-
-    <script>
-        function isDateInFuture(dateInput) {
-
-            var date = new Date();
-
-            mydate = new Date(dateInput);
-            console.log(mydate);
-
-            if (date < mydate) {
-                // alert(" The given date is Future Date");
-                return true;
-            } else {
-                // alert("The given date is Past Date");
-                return false;
-            }
-        }
-    </script>
-
-    <!-- sending data to API -->
-    <script>
-        function dataToAPI(firstname, lastname, message, email, date) {
-            var body = {
-                "firstName": firstname,
-                "lastName": lastname,
-                "message": message,
-                "email": email,
-                "sendAt": (date.replace(" ", ""))
-
-            }
-
-            console.log(body);
-
-            fetch('http://localhost:3000/message', {
-                method: 'POST',
-                body: JSON.stringify(
-                    body,
-                ),
-                headers: {
-                    'Content-type': 'application/json; charset=UTF-8'
-                }
-            }).then(function(response) {
-                console.log('test', response)
-                if (response.ok) {
-                    alert('succes!');
-                }
-            }).catch(function(e) {
-                console.log('catch', e)
-                alert("niet toegevoegd!");
-            })
-        }
-
-        $("#form").on("submit", function(e) {
-            e.preventDefault();
-            console.log(e);
-
-            dataToAPI(e.target[0].value, e.target[1].value, e.target[4].value, e.target[2].value, e.target[3].value);
-        });
-    </script>
-
-
 
 </body>
 
