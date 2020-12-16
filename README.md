@@ -2,7 +2,14 @@
 
 Een webapplicatie waarin je een boodschap kunt typen over bijvoorbeeld hoe het nu met je gaat. Ook kun je een bepaald periode aangeven, waarna je je eigen bericht per email gestuurd krijgt om te kunnen reflecteren op je eigen boodschap.
 
-## Installation
+## Table of Contents
+1. Installation
+2. What it does
+3. Usage
+4. Feedback
+5. License
+
+## 1. Installation
 
 De applicatie is reeds in ontwikkeling en nog niet geschikt gemaakt om te exporteren. Je kunt de applicatie wel downloaden en zelf bouwen, hiervoor is wel een (lokale) database benodigd en Node.js.
 
@@ -13,7 +20,7 @@ Voor het installeren en draaien van API zijn een paar stappen die doorlopen dien
 4. in de terminal naar de locatie navigeren
 5. API starten
 
-### 1. Install Node.js for Mac
+### a. Install Node.js for Mac
 
 1. Go to the Node.js [Downloads page](https://nodejs.org/en/download/)
 2. Download Node.js for macOS by clicking the "Macintosh Installer" option
@@ -21,7 +28,7 @@ Voor het installeren en draaien van API zijn een paar stappen die doorlopen dien
 4. Voer de installer uit, inclusief het accepteren van de  license, het selecteren van een locatie en toestemming geven voor de installatie.
 5. Node.js is geinstalleerd! Om er zeker van te zijn dat Node.js juist is geinstalleerd, run *node -v* in de terminal en als antwoord zou je iets moeten krijgen zoals *v6.9.4*
 
-### 1. Install Node.js for Windows
+### a. Install Node.js for Windows
 
 1. Go to the Node.js [Downloads page](https://nodejs.org/en/download/)
 2. Download Node.js for Windows by clicking the "Windows Installer" option
@@ -29,26 +36,29 @@ Voor het installeren en draaien van API zijn een paar stappen die doorlopen dien
 4. Voer de installer uit, inclusief het accepteren van de  license, het selecteren van een locatie en toestemming geven voor de installatie.
 5. Node.js is geinstalleerd! Om er zeker van te zijn dat Node.js juist is geinstalleerd, run *node -v* in de terminal en als antwoord zou je iets moeten krijgen zoals *v6.9.4*
 
-### 2. Downloaden van Github bestanden
+### b. Downloaden van Github bestanden
 Voor het downloaden van de API bestanden in een browser dient de API branch geselecteerd te zijn. Wanneer de juiste branch is geselecteerd kan op het pijlte naar beneden, op de groene knop waarop "code" staat, gedrukt worden en kun je kiezen voor "Download ZIP".
 
-### 3. Bestanden uitpakken en locatie geven
+### c. Bestanden uitpakken en locatie geven
 De bestanden in dit zip bestanden kunnen uitgepakt worden met de optie hiervoor in het besturingssysteem of met een programma als [WinZip](https://www.winzip.com/win/en/prod_down.html). Plaats de bestanden uit de zip op een plek die makkelijk terug te vinden is. 
 
-### 4. In terminal naar locatie navigeren
+### d. In terminal naar locatie navigeren
 Navigeer naar de locatie waar je de bestanden hebt opgeslagen in de terminal. Voor het navigeren in de terminal kun je gebruik maken van het command *ls* om een lijst van documenten te zien in de huidige folder en het command *cd* gevolgd door de naam van een folder om te navigeren naar deze foler. 
 
-### 5. API starten
+### e. API starten
 Het starten van de API kan, wanneer er naar de juiste folder is genavigeert in de terminal, met het command *npm run start* in de terminal. De API wordt automatisch gestart en wanneer er geen foutmeldingen terug komen werkt de API.
 
-## Usage
+## 2. What it does
+In de interface zijn de benodigde gegevens in te vullen voor de API. Deze API heeft je naam, emialadress, een bericht en een dag nodig. De bedoeling is om een zelf reflecteren bericht te schrijven aan jezelf, waarin je bijvoorbeeld beschrijft hoe je huidige stituatie is en hoe je wilt dat je leven eruit ziet wanneer je het bericht ontvangt. Het bericht ontavng je op de door jou aangegeven datum via het emailadress dat je hebt opgegeven. 
+
+## 3. Usage
 
 Via een webapplicatie of het programma postman en een terminal programma kunnen de functie van de applicatie getest worden, Dit houdt in het invoeren van gegevens en het versturen van emails. 
 
-## Feedback
+## 4. Feedback
 Alle soorten feedback zijn welkom. Dit kan zijn in de vorm van [issues](https://github.com/nielsmanders/FutureMe/issues), [pull requests](https://github.com/nielsmanders/FutureMe/pulls) of iets anders via [email](mailto:lunde@adobe.com?subject=[Github]%Feedback%20FutureMe).
 
-## License
+## 5. License
 MIT License
 
 Copyright (c) 2020 nielsmanders
