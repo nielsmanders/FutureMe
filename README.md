@@ -21,7 +21,7 @@ Voor het installeren en draaien van API zijn een paar stappen die doorlopen dien
 4. in de terminal naar de locatie navigeren
 5. API starten
 
-### a. Install Node.js for Mac
+#### a. Install Node.js for Mac
 
 1. Go to the Node.js [Downloads page](https://nodejs.org/en/download/)
 2. Download Node.js for macOS by clicking the "Macintosh Installer" option
@@ -29,7 +29,7 @@ Voor het installeren en draaien van API zijn een paar stappen die doorlopen dien
 4. Voer de installer uit, inclusief het accepteren van de  license, het selecteren van een locatie en toestemming geven voor de installatie.
 5. Node.js is geinstalleerd! Om er zeker van te zijn dat Node.js juist is geinstalleerd, run *node -v* in de terminal en als antwoord zou je iets moeten krijgen zoals *v6.9.4*
 
-### a. Install Node.js for Windows
+#### a. Install Node.js for Windows
 
 1. Go to the Node.js [Downloads page](https://nodejs.org/en/download/)
 2. Download Node.js for Windows by clicking the "Windows Installer" option
@@ -37,16 +37,16 @@ Voor het installeren en draaien van API zijn een paar stappen die doorlopen dien
 4. Voer de installer uit, inclusief het accepteren van de  license, het selecteren van een locatie en toestemming geven voor de installatie.
 5. Node.js is geinstalleerd! Om er zeker van te zijn dat Node.js juist is geinstalleerd, run *node -v* in de terminal en als antwoord zou je iets moeten krijgen zoals *v6.9.4*
 
-### b. Downloaden van Github bestanden
+#### b. Downloaden van Github bestanden
 Voor het downloaden van de API bestanden in een browser dient de API branch geselecteerd te zijn. Wanneer de juiste branch is geselecteerd kan op het pijlte naar beneden, op de groene knop waarop "code" staat, gedrukt worden en kun je kiezen voor "Download ZIP".
 
-### c. Bestanden uitpakken en locatie geven
+#### c. Bestanden uitpakken en locatie geven
 De bestanden in dit zip bestanden kunnen uitgepakt worden met de optie hiervoor in het besturingssysteem of met een programma als [WinZip](https://www.winzip.com/win/en/prod_down.html). Plaats de bestanden uit de zip op een plek die makkelijk terug te vinden is. 
 
-### d. In terminal naar locatie navigeren
+#### d. In terminal naar locatie navigeren
 Navigeer naar de locatie waar je de bestanden hebt opgeslagen in de terminal. Voor het navigeren in de terminal kun je gebruik maken van het command *ls* om een lijst van documenten te zien in de huidige folder en het command *cd* gevolgd door de naam van een folder om te navigeren naar deze foler. 
 
-### e. API starten
+#### e. API starten
 Het starten van de API kan, wanneer er naar de juiste folder is genavigeert in de terminal, met het command *npm run start* in de terminal. De API wordt automatisch gestart en wanneer er geen foutmeldingen terug komen werkt de API.
 
 ## 2. What it does
@@ -59,7 +59,7 @@ Via een webapplicatie of het programma postman en een terminal programma kunnen 
 ## 4. Testing
 Er zijn enkele mogelijkheden voor het testen van de verschillende onderdelen van de applicatie en API. 
 
-### front-end
+#### front-end
 Voor het testen van de front-end kan deze offline worden geopend zonder dat de API draait. Wanneer je test gegevens invult kun je in de console zien of dit correct gedaan is of niet. Wanneer de gegevens juist zijn ingevuld kun je een object verwachten met het volgende format:
 
 ```json
@@ -78,14 +78,14 @@ select * FROM message;
 ```
 De database zal alle ingevulde messages teruggeven en wanneer alles goed werkt zal het testbericht hier ook tussen staan, onder aan de lijst van messages.
 
-### Messages
+#### Messages
 Om te zien of de juiste berichten geselecteerd worden kan de API gesstart worden, deze geeft na enige tijd zelf aan welke timestamp bij vandaag hoort en laat zien welke berichten hiermee overeen komen en verstuurd worden op de huidige dag. Het starten van de API kan op de volgende manier:
 
 ```shell
 npm run start:dev
 ```
 
-### Emails
+#### Emails
 Voor het versturen van de email wordt gebruikt gemaakt van een Gmail API die door Google beschikbaar gesteld wordt. Helaas is de enige manier om te testen, of de het versturen van email werkt, hierdoor het invullen van gegevens in de front-end of direct in de database waarbij een eigen emailadress gebruikt wordt. Als het goed is ontvang je na enige tijd automatisch je ingevuld test gegevens via email. 
 
 ## 5. Feedback
