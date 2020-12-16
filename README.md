@@ -6,7 +6,8 @@ Een webapplicatie waarin je een boodschap kunt typen over bijvoorbeeld hoe het n
 1. Installation
 2. What it does
 3. Usage
-4. Feedback
+4. Testing
+5. Feedback
 5. License
 
 ## 1. Installation
