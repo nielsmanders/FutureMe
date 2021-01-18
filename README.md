@@ -1,61 +1,103 @@
-# [Start Bootstrap - Scrolling Nav](https://startbootstrap.com/templates/scrolling-nav/)
+# Future Me
 
-[Scrolling Nav](https://startbootstrap.com/templates/scrolling-nav/) is an unstyled one page starter template with a collapsing, smooth scrolling navigation bar for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/).
+Een webapplicatie waarin je een boodschap kunt typen over bijvoorbeeld hoe het nu met je gaat. Ook kun je een bepaald periode aangeven, waarna je je eigen bericht per email gestuurd krijgt om te kunnen reflecteren op je eigen boodschap.
 
-## Preview
+## Table of Contents
+1. Installation
+2. What it does
+3. Usage
+4. Testing
+5. Feedback
+5. License
 
-[![Scrolling Nav Preview](https://startbootstrap.com/assets/img/screenshots/templates/scrolling-nav.png)](https://startbootstrap.github.io/startbootstrap-scrolling-nav/)
+## 1. Installation
 
-**[View Live Preview](https://startbootstrap.github.io/startbootstrap-scrolling-nav/)**
+De applicatie is reeds in ontwikkeling en nog niet geschikt gemaakt om te exporteren. Je kunt de applicatie wel downloaden en zelf bouwen, hiervoor is wel een (lokale) database benodigd en Node.js.
 
-## Status
+Voor het installeren en draaien van API zijn een paar stappen die doorlopen dienen te worden. 
+1. Installeren van Node.js
+2. Downloaden van Github bestanden
+3. Bestanden uitpakken en locatie geven
+4. in de terminal naar de locatie navigeren
+5. API starten
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/StartBootstrap/startbootstrap-scrolling-nav/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-scrolling-nav.svg)](https://www.npmjs.com/package/startbootstrap-scrolling-nav)
-[![Build Status](https://travis-ci.org/StartBootstrap/startbootstrap-scrolling-nav.svg?branch=master)](https://travis-ci.org/StartBootstrap/startbootstrap-scrolling-nav)
-[![dependencies Status](https://david-dm.org/StartBootstrap/startbootstrap-scrolling-nav/status.svg)](https://david-dm.org/StartBootstrap/startbootstrap-scrolling-nav)
-[![devDependencies Status](https://david-dm.org/StartBootstrap/startbootstrap-scrolling-nav/dev-status.svg)](https://david-dm.org/StartBootstrap/startbootstrap-scrolling-nav?type=dev)
+#### a. Install Node.js for Mac
 
-## Download and Installation
+1. Go to the Node.js [Downloads page](https://nodejs.org/en/download/)
+2. Download Node.js for macOS by clicking the "Macintosh Installer" option
+3. Run de gedownloade Node.js .pkg Installer
+4. Voer de installer uit, inclusief het accepteren van de  license, het selecteren van een locatie en toestemming geven voor de installatie.
+5. Node.js is geinstalleerd! Om er zeker van te zijn dat Node.js juist is geinstalleerd, run *node -v* in de terminal en als antwoord zou je iets moeten krijgen zoals *v6.9.4*
 
-To begin using this template, choose one of the following options to get started:
+#### a. Install Node.js for Windows
 
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/templates/scrolling-nav/)
-* Install via npm: `npm i startbootstrap-scrolling-nav`
-* Clone the repo: `git clone https://github.com/StartBootstrap/startbootstrap-scrolling-nav.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/StartBootstrap/startbootstrap-scrolling-nav)
+1. Go to the Node.js [Downloads page](https://nodejs.org/en/download/)
+2. Download Node.js for Windows by clicking the "Windows Installer" option
+3. Run de gedownloade Node.js .pkg Installer
+4. Voer de installer uit, inclusief het accepteren van de  license, het selecteren van een locatie en toestemming geven voor de installatie.
+5. Node.js is geinstalleerd! Om er zeker van te zijn dat Node.js juist is geinstalleerd, run *node -v* in de terminal en als antwoord zou je iets moeten krijgen zoals *v6.9.4*
 
-## Usage
+#### b. Downloaden van Github bestanden
+Voor het downloaden van de API bestanden in een browser dient de API branch geselecteerd te zijn. Wanneer de juiste branch is geselecteerd kan op het pijlte naar beneden, op de groene knop waarop "code" staat, gedrukt worden en kun je kiezen voor "Download ZIP".
 
-### Basic Usage
+#### c. Bestanden uitpakken en locatie geven
+De bestanden in dit zip bestanden kunnen uitgepakt worden met de optie hiervoor in het besturingssysteem of met een programma als [WinZip](https://www.winzip.com/win/en/prod_down.html). Plaats de bestanden uit de zip op een plek die makkelijk terug te vinden is. 
 
-After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
+#### d. In terminal naar locatie navigeren
+Navigeer naar de locatie waar je de bestanden hebt opgeslagen in de terminal. Voor het navigeren in de terminal kun je gebruik maken van het command *ls* om een lijst van documenten te zien in de huidige folder en het command *cd* gevolgd door de naam van een folder om te navigeren naar deze foler. 
 
-### Advanced Usage
+#### e. API starten
+Het starten van de API kan, wanneer er naar de juiste folder is genavigeert in de terminal, met het command *npm run start* in de terminal. De API wordt automatisch gestart en wanneer er geen foutmeldingen terug komen werkt de API.
 
-After installation, run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
+## 2. What it does
+In de interface zijn de benodigde gegevens in te vullen voor de API. Deze API heeft je naam, emialadress, een bericht en een dag nodig. De bedoeling is om een zelf reflecteren bericht te schrijven aan jezelf, waarin je bijvoorbeeld beschrijft hoe je huidige stituatie is en hoe je wilt dat je leven eruit ziet wanneer je het bericht ontvangt. Het bericht ontavng je op de door jou aangegeven datum via het emailadress dat je hebt opgegeven. 
 
-You must have npm and Gulp installed globally on your machine in order to use these features.
+## 3. Usage
 
-## Bugs and Issues
+Via een webapplicatie of het programma postman en een terminal programma kunnen de functie van de applicatie getest worden, Dit houdt in het invoeren van gegevens en het versturen van emails. 
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/StartBootstrap/startbootstrap-scrolling-nav/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](https://startbootstrap.com/templates/scrolling-nav/).
+## 4. Testing
+Er zijn enkele mogelijkheden voor het testen van de verschillende onderdelen van de applicatie en API. 
 
-## About
+#### front-end
+Voor het testen van de front-end kan deze offline worden geopend zonder dat de API draait. Wanneer je test gegevens invult kun je in de console zien of dit correct gedaan is of niet. Wanneer de gegevens juist zijn ingevuld kun je een object verwachten met het volgende format:
 
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
+```json
+{
+    "firstName": "Test",
+    "lastName": "Message",
+    "message": "test message number 2",
+    "email": "nielsmanders@gmail.com",
+    "createdAt": 1602626400,
+    "sendAt": 1602626400
+}
+```
+Wanneer er wel gebruik wordt gemaakt van de API kan in de database ook gekeken worden of het ingevulde testbericht hierin terug komt. Dit kan door in bijvoorbeeld MYSQL Workbench de volgende query in te vullen:
+```
+SELECT * FROM message;
+```
+De database zal alle ingevulde messages teruggeven en wanneer alles goed werkt zal het testbericht hier ook tussen staan, onder aan de lijst van messages.
 
-* <https://startbootstrap.com>
-* <https://twitter.com/SBootstrap>
+#### Messages
+Om te zien of de juiste berichten geselecteerd worden kan de API gesstart worden, deze geeft na enige tijd zelf aan welke timestamp bij vandaag hoort en laat zien welke berichten hiermee overeen komen en verstuurd worden op de huidige dag. Het starten van de API kan op de volgende manier:
 
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**.
+```shell
+npm run start:dev
+```
 
-* <http://davidmiller.io>
-* <https://twitter.com/davidmillerskt>
-* <https://github.com/davidtmiller>
+#### Emails
+Voor het versturen van de email wordt gebruikt gemaakt van een Gmail API die door Google beschikbaar gesteld wordt. Helaas is de enige manier om te testen, of de het versturen van email werkt, hierdoor het invullen van gegevens in de front-end of direct in de database waarbij een eigen emailadress gebruikt wordt. Als het goed is ontvang je na enige tijd automatisch je ingevuld test gegevens via email. 
 
-Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+## 5. Feedback
+Alle soorten feedback zijn welkom. Dit kan zijn in de vorm van [issues](https://github.com/nielsmanders/FutureMe/issues), [pull requests](https://github.com/nielsmanders/FutureMe/pulls) of iets anders via [email](mailto:nielsmanders@gmail.com?subject=[Github]%Feedback%20FutureMe).
 
-## Copyright and License
+## 6. License
+MIT License
 
-Copyright 2013-2020 Start Bootstrap LLC. Code released under the [MIT](https://github.com/StartBootstrap/startbootstrap-scrolling-nav/blob/gh-pages/LICENSE) license.
+Copyright (c) 2020 nielsmanders
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
