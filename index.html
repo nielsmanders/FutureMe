@@ -131,8 +131,8 @@
                 <div class="container py-1 max-w-md mx-auto ">
                     <h5>How it works</h5>
                     <h2 class="pb-4 ">You write the message, <br> We send it to you!</h2>
-                    <p class="font-light pb-4 ">Different societies may have different theories of property for differing types of ownership. Pauline Peters argued that property systems are not isolable from the social fabric, and notions of property may not be stated as such, but
-                        instead may be framed in negative terms.
+                    <p class="font-light pb-4 ">Human self-reflection is the capacity of humans to exercise introspection and to attempt to learn more about their fundamental nature and essence. By reflecting on yourself you can get the most out of your life, we just make this easy
+                        for you to do.
                     </p>
                     <button class="bg-blue-custom hover:bg-blue-500 text-white font-cond py-2 px-4 rounded-full ">Learn more </button>
 
@@ -178,7 +178,8 @@
 
                             <!-- date input with validation -->
                             <div class="mb-6">
-                                <input placeholder="DD/MM/YYYY " class="shadow appearance-none rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline " id="date-input" type="text" required autocomplete="off">
+                                <!-- <input placeholder="DD/MM/YYYY " class="shadow appearance-none rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline " id="date-input" type="text" required autocomplete="off"> -->
+                                <input class="shadow appearance-none rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" type="date" id="start" name="trip-start" value="DateTime.Today.ToString('yyyy-MM-dd')" min="DateTime.Today.ToString('yyyy-MM-dd')">
                             </div>
 
                             <!-- message field -->
@@ -306,9 +307,9 @@
                 <div class="min-h-0 pb-4">
                     <div class="container py-1 max-w-md mx-auto">
                         <div class="px-6 py-4">
-                            <p class="text-white">About</p>
+                            <p class="text-white">Contact</p>
                             <hr class="mt-2 mb-2">
-                            <p class="text-white text-base font-thin">This website was created as a school project for UI/UX design and a little bit of backend programming.</p>
+                            <p class="text-white text-base font-thin">For questions and feedback please contact us via <a href="mailto:futuremeapplication@gmail.com" class="nohover"><u>email</u></a>.</p>
                             <p class="text-white mt-4">Social media</p>
                             <hr class="mt-2 mb-2">
                             <div class="flex mb-4 mt-3 ml-1">
@@ -327,6 +328,9 @@
                 </div>
             </div>
         </div>
+        <p class="underfooter">
+            <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+        </p>
     </footer>
 
     <!-- Bootstrap core JavaScript -->
