@@ -5,10 +5,11 @@ Een webapplicatie waarin je een boodschap kunt typen over bijvoorbeeld hoe het n
 ## Table of Contents
 1. Installation
 2. What it does
-3. Usage
-4. Testing
-5. Feedback
-5. License
+3. Development
+4. Usage
+5. Testing
+6. Feedback
+7. License
 
 ## 1. Installation
 
@@ -52,11 +53,27 @@ Het starten van de API kan, wanneer er naar de juiste folder is genavigeert in d
 ## 2. What it does
 In de interface zijn de benodigde gegevens in te vullen voor de API. Deze API heeft je naam, emialadress, een bericht en een dag nodig. De bedoeling is om een zelf reflecteren bericht te schrijven aan jezelf, waarin je bijvoorbeeld beschrijft hoe je huidige stituatie is en hoe je wilt dat je leven eruit ziet wanneer je het bericht ontvangt. Het bericht ontavng je op de door jou aangegeven datum via het emailadress dat je hebt opgegeven. 
 
-## 3. Usage
+## 3. Development
+Voor het ontwikkelen van de applicatie is gebruik gemaakt van twee libraries en één API om de realisatie eenvoudiger en beter te maken. 
+
+#### Tailwind CSS
+Tailwind CSS is een library gericht op front-end ontwikkeling door middel van eenvoudige en begrijpbare classes die gemakkelijk zijn toe te passen in een ontwerp. <br>
+Documentatie voor Tailwind CSS is te vinden op de [Tailwindcss website](https://tailwindcss.com/).<br>
+Ook is het Tailwind CSS project te vinden op [Github](https://github.com/tailwindlabs/tailwindcss). 
+
+#### nm-icon pack
+De NM-icon pack is een collectie van vele verschillende, op SVG gebaseerde, icoontje die uitermate geschikt zijn voor het realiseren van web interfaces. De nm-icon pack valt onder MIT license en kan vrij gebruikt worden.<br>
+Alle bijbehorede bestanden zijn te vinden in de volgende [Github](https://github.com/nielsmanders/nm-icons).
+
+#### Gmail API
+Voor het versturen van Emails is gekozen om gebruik te maken van een Gmail API. Op deze manier kan eenvoudig een Gmail account gebruikt worden voor het versturen van emails. <br>
+De API en bijbehorende gegevens zijn te vinden op de [Google developers website](https://developers.google.com/gmail/api/reference/rest).
+
+## 4. Usage
 
 Via een webapplicatie of het programma postman en een terminal programma kunnen de functie van de applicatie getest worden, Dit houdt in het invoeren van gegevens en het versturen van emails. 
 
-## 4. Testing
+## 5. Testing
 Er zijn enkele mogelijkheden voor het testen van de verschillende onderdelen van de applicatie en API. 
 
 #### front-end
@@ -88,10 +105,10 @@ npm run start:dev
 #### Emails
 Voor het versturen van de email wordt gebruikt gemaakt van een Gmail API die door Google beschikbaar gesteld wordt. Helaas is de enige manier om te testen, of de het versturen van email werkt, hierdoor het invullen van gegevens in de front-end of direct in de database waarbij een eigen emailadress gebruikt wordt. Als het goed is ontvang je na enige tijd automatisch je ingevuld test gegevens via email. 
 
-## 5. Feedback
+## 6. Feedback
 Alle soorten feedback zijn welkom. Dit kan zijn in de vorm van [issues](https://github.com/nielsmanders/FutureMe/issues), [pull requests](https://github.com/nielsmanders/FutureMe/pulls) of iets anders via [email](mailto:nielsmanders@gmail.com?subject=[Github]%Feedback%20FutureMe).
 
-## 6. License
+## 7. License
 MIT License
 
 Copyright (c) 2020 nielsmanders
